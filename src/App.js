@@ -1,23 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import MusicPlayer from './components/MusicPlayer';
+import React, { useState, useEffect } from 'react';
+import './styles/global.css';
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import About from './components/About';
+import Projects from './components/Projects';
+import Skills from './components/Skills';
+import Certifications from './components/Certifications';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
 
 function App() {
+  const [darkMode, setDarkMode] = useState(true);
+
+  useEffect(() => {
+    document.body.className = darkMode ? '' : 'light';
+  }, [darkMode]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
+      <Hero />
+      <About />
+      <Projects />
+      <Skills />
+      <Certifications />
+      <Contact />
+      <Footer />
+       <MusicPlayer />
     </div>
   );
 }

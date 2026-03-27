@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --bg: #0a0a0f;
+  --bg-secondary: #111118;
+  --neon: #00f5ff;
+  --neon-purple: #bf5af2;
+  --text: #e0e0e0;
+  --text-muted: #888;
+  --card: #16161f;
+  --border: #2a2a3a;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+section {
+  padding: 80px 10%;
+}
+
+h2.section-title {
+  font-size: 2rem;
+  color: var(--neon);
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.section-line {
+  width: 60px;
+  height: 3px;
+  background: var(--neon-purple);
+  margin-bottom: 50px;
+  border-radius: 2px;
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: 60px 6%;
+  }
+
+  nav ul {
+    display: none !important;
+  }
+}
+
+body.light {
+  --bg: #f0f4f8;
+  --bg-secondary: #e2e8f0;
+  --neon: #0077cc;
+  --neon-purple: #7c3aed;
+  --text: #1a1a2e;
+  --text-muted: #555;
+  --card: #ffffff;
+  --border: #cbd5e1;
+}
+
+body.light section {
+  background: var(--bg) !important;
+}
+
+body.light nav {
+  background: rgba(240,244,248,0.95) !important;
+}
