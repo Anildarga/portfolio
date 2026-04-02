@@ -9,6 +9,7 @@ import Skills from './components/Skills';
 import Certifications from './components/Certifications';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import { Analytics } from '@vercel/analytics/react';
 
 function App() {
   const [darkMode, setDarkMode] = useState(true);
@@ -28,6 +29,7 @@ function App() {
       <Contact />
       <Footer />
        <MusicPlayer />
+       <Analytics />
     </div>
   );
 }
